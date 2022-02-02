@@ -1,0 +1,186 @@
+:root{ 
+  --color-yellow:#fce138;
+  --color-blue:#39a6b2;
+  --color-dark-blue:#024e76;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body{
+  color: var(--color-blue);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* apply styles to header start */
+header{
+  background-color:var(--color-blue);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px 35px;
+}
+
+header a{
+  text-decoration: none;
+  color: var(--color-yellow);
+}
+
+header h1{
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0;
+  cursor: pointer;
+  display: inline;
+}
+
+header nav{
+float: right;
+margin: 7px 0;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+header nav ul li{
+  display: inline;
+  margin: 30px;
+  list-style: none;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: #fce138;
+  font-size: 22px;
+  font-weight: lighter;
+}
+/* header ends */
+
+
+/* section hero starts */
+.hero {
+  background-image: url(/images/hero-bg.jpg);
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-form {
+  border: 3px solid #024e76;
+  background-color: #fce138;
+  padding: 20px;
+  width: 500px;
+  color: #024e76;
+  position: absolute;
+  bottom: 120px;
+  right: 140px;
+}
+
+.hero-form h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.hero-form p {
+  margin: 5px 0 15px 0;
+}
+
+.hero-form label {
+  margin: 0 5px;
+}
+
+.form-input {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.hero-form button {
+  color: #fce138;
+  background-color: #024e76;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* section hero ends */
+
+
+/* section what we do starts */
+.intro {
+  text-align: center;
+}
+
+section {
+  padding: 60px;
+}
+
+.section-title.primary-border{
+  border-color: var(--color-yellow);
+}
+
+.intro p {
+  line-height: 1.7;
+  color: #39a6b2;
+  width: 80%;
+  font-size: 20px;
+  margin: 0 auto;
+}
+/* section what we do ends */
+
+
+
+/* section what you do starts */
+.steps {
+  text-align: center;
+  background: var(--color-yellow);
+}
+
+.section-title.secondary-border {
+  border-color: #39a6b2;
+}
+
+.section-title {
+  font-size: 55px;
+  color: #024e76;
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  display: inline-block;
+  border-bottom: 3px solid;
+}
+
+.steps div {
+  margin-bottom: 80px;
+}
+
+.steps img {
+  width: 15%;
+  margin: 10px 0;
+}
+
+.steps h3 {
+  color: var(--color-dark-blue);
+  font-size: 46px;
+  margin-top: 10px;
+}
+/* section what you do Ends */
+
+
+
+/* Meet trainer section starts */
