@@ -43,16 +43,6 @@ float: right;
 margin: 7px 0;
 }
 
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
-
 header nav ul li{
   display: inline;
   margin: 30px;
@@ -240,6 +230,23 @@ section {
   height: 400px;
 }
 
+.contact-info h3{
+  color: var(--color-yellow);
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+.contact-info p, .contact-info address{
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 20px;
+  font-style: normal; /* that will take away the provided style to the page and change it to the default style  */
+}
+
+.contact-info a{
+  color: var(--color-yellow);
+}
+
 .contact-info div {
   width: 410px;
   display: inline-block;
@@ -271,4 +278,8 @@ footer div{
   float: right;
   line-height: 1.5;
   text-align: right;
+}
+
+footer a{
+  color: var(--color-dark-blue);
 }
