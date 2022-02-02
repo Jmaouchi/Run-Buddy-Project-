@@ -11,8 +11,11 @@
   text-transform: capitalize;
 }
 
-/* header start */
+body{
+  font-family: Helvetica, Arial, sans-serif;
+}
 
+/* header start */
 header{
   background-color:var(--color-blue);
   display: flex;
@@ -48,15 +51,13 @@ header nav ul li a{
   font-size: 25px;
   font-weight: 300;
 }
-
 /* header ends */
 
 
 
 /* section hero starts */
-
 section.hero{
- background-image: url(/images/work-1.png);
+ background-image: url(/images/hero-bg.jpg);
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
@@ -128,4 +129,40 @@ button.btn{
 button:hover{
   letter-spacing: 0.07rem;
   border: solid 1px var(--color-blue);
+}
+/* section hero ends */
+
+
+
+/* section what we do starts */
+.intro{
+  text-align: center;
+}
+
+section#what-we-do{
+  padding: 60px;
+}
+
+h4 {
+  font-size: 50px;
+  margin-bottom: 35px;
+  border-bottom: solid 2px;
+}
+
+h4.border {
+  border-color: var(--color-yellow);
+}
+
+h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+section#what-we-do p{
+  font-size: 20px;
+  padding: 0 200px 20px 200px;
 }
