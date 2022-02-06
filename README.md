@@ -11,4 +11,4 @@ A website that offers fitness training services.
 https://jmaouchi.github.io/Run-Buddy-Project-/
 
 ## Contribution
-git Made with ❤️ by [Jugurta Maouchi]
+git Made with ❤️ by [Jugurta Maouchi] 
