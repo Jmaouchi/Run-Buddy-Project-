@@ -13,4 +13,4 @@ https://jmaouchi.github.io/Run-Buddy-Project-/
 ## Contribution
 git Made with ❤️ by [Jugurta Maouchi] 
 
-# Run Buddy Inc.
+### ©️2019 Run Buddy, Inc 
