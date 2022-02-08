@@ -128,10 +128,6 @@ header nav ul li a {
 
 
 /* section what we do starts */
-.intro {
-  text-align: center;
-}
-
 section {
   padding: 60px;
 }
@@ -146,6 +142,7 @@ section {
   width: 80%;
   font-size: 20px;
   margin: 0 auto;
+  text-align: center
 }
 /* section what we do ends */
 
@@ -153,8 +150,11 @@ section {
 
 /* section what you do starts */
 .steps {
-  text-align: center;
   background: var(--color-yellow);
+}
+
+.flex-row {
+  display: flex;
 }
 
 .section-title.secondary-border {
@@ -164,35 +164,65 @@ section {
 .section-title {
   font-size: 55px;
   color: #024e76;
-  margin-bottom: 35px;
-  padding: 0 100px 20px 100px;
-  display: inline-block;
   border-bottom: 3px solid;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 50%;
 }
 
-.steps div {
-  margin-bottom: 80px;
+.step {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  width: 80%;
+  border-bottom: 1px solid #39a6b2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.steps img {
-  width: 15%;
-  margin: 10px 0;
-}
-
-.steps h3 {
+.step h3 {
   color: var(--color-dark-blue);
   font-size: 46px;
-  margin-top: 10px;
+  flex: 1 30%;
 }
+
+.step-info{
+  flex: 2 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.step-img {
+  flex:1 12%; /* at the very least must be 12 percent of the width of .step-info. */
+  margin-right: 20px;
+}
+
+.step-img img {
+  max-width: 100%;
+}
+
+.step-text {
+  flex:12; /* This means that .step-text will be allotted 12 times more unused space than .step-img */
+}
+
+.step-text h4 {
+  font-size: 26px;
+  line-height: 1.5;
+  color: #024e76;
+}
+
+.step-text p{
+  font-size: 18px;
+}
+
 /* section what you do Ends */
 
 
 
 /* Meet trainer section starts */
-.trainers{
-  text-align: center;
-}
-
 .trainer {
   width: 900px;
   margin: 0 auto 30px auto;
@@ -208,6 +238,10 @@ section {
 
 .text-left {
   text-align: left;
+}
+
+.flex-row {
+  display: flex;
 }
 
 .trainer-bio {
@@ -233,7 +267,6 @@ section {
 /* section Reach Out starts */
 .contact{
   background-color: var(--color-dark-blue);
-  text-align: center;
 }
 
 .contact h2 {
