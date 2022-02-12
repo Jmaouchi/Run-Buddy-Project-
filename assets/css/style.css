@@ -412,7 +412,6 @@ footer a{
 
   .hero-cta{
     text-align: center;
-    border: solid 5px blue;
   }
 
   .section-title{
@@ -459,6 +458,18 @@ footer a{
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    justify-content:center;
+  }
+
+  header nav ul li {
+    margin-top: 10px;
+  }
+
   .hero-form button {
     width: 100%;
   }
