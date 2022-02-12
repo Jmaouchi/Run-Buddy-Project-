@@ -20,10 +20,18 @@ body{
 header{
   background-color:var(--color-blue);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* to wrap the childElements on small screens*/
   justify-content: space-between; 
   align-items: center;
   padding: 20px 35px;
+  position: sticky; /* this will position the header on the top even we will scroll down until we hit another parent elemetns*/
+  top: 0px;
+  position: -webkit-sticky;
+  background-image: url('../images/hero-bg.jpg'); /* added this image again to make the header and the hero section with one image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* added this to  which places the image relative to the viewport instead of the element.*/
+  background-position: 80%; /* this to make sure that  which places the image relative to the viewport instead of the element. */
 }
 
 header a{
@@ -36,6 +44,7 @@ header h1{
   font-size: 36px;
   margin: 0;
   cursor: pointer;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header nav{
@@ -55,6 +64,13 @@ header nav ul li a {
   font-weight: lighter;
   font-size: 1.55vw; /* VW : if the browser grows or shrinks, that size will change relative to the new overall width */
 }
+
+header nav ul li a:hover{
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
+}
 /* header ends */
 
 
@@ -67,6 +83,8 @@ header nav ul li a {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
 }
 
 .hero-cta {
@@ -92,6 +110,8 @@ header nav ul li a {
   bottom: 120px;
   width: 40%;
   margin: 3.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -109,6 +129,7 @@ header nav ul li a {
 
 .form-input {
   border: 1px solid #024e76;
+  background-color: rgba(255,255,255, 0.75);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
@@ -117,12 +138,23 @@ header nav ul li a {
   margin-bottom: 15px;
 }
 
+.form-input:focus {
+  background-color: rgba(255,255,255, 1); /* the focus here is to change the background colore everytime we click on the input*/
+  font-size: 25px;
+}
+
 .hero-form button {
   color: #fce138;
   background-color: #024e76;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 15px;
+}
+
+
+.hero-form button:hover{
+  background-color: #39a6b2;  
 }
 
 /* section hero ends */
@@ -176,11 +208,15 @@ section {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #39a6b2;
+}
+
+.step:last-child { /* in this case we will take off the border bottom on the last child of the .step class*/
+  border-bottom: none;
 }
 
 .step h3 {
@@ -314,6 +350,7 @@ section {
 
 .contact-form input, .contact-form textarea{
   border: 1px solid var(--color-dark-blue);
+  background-color: rgb(226, 221, 221);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
@@ -321,7 +358,17 @@ section {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
-  border-radius: 10px;
+  border-radius: 15px;
+}
+
+
+
+.contact-form input:focus,.contact-form textarea:focus{
+  background-color: rgb(104, 100, 100);
+}
+
+.contact-form input:focus::placeholder, .contact-form textarea:focus::placeholder{ /* this will make the placeholder text to show white everytime we try to write*/
+  color: white;
 }
 
 .contact-form button{
@@ -332,7 +379,16 @@ section {
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 15px;
+}
+
+.contact-form button:hover{
+  color: #fce138;
+  background: #39a6b2;
+}
+
+.contact-form button:active{ /* the active in this case will always change the background color to red when we click */
+  background: red; 
 }
 
 .contact-info a{
@@ -384,6 +440,7 @@ footer a{
   header{
     padding-bottom: 0;
     justify-content: center;
+    position: relative; /*this to take off the stiky position on the header cuase its taking too much space*/
   }
 
   header h1{
