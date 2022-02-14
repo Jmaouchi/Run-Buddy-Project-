@@ -32,6 +32,7 @@ header{
   background-position: center;
   background-attachment: fixed; /* added this to  which places the image relative to the viewport instead of the element.*/
   background-position: 80%; /* this to make sure that  which places the image relative to the viewport instead of the element. */
+  z-index: 9999;
 }
 
 header a{
@@ -66,8 +67,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover{
-  background: #fce138;
-  color: #024e76;
+  background: var(--color-yellow);
+  color: var(--color-dark-blue);
   border-radius: 15px;
   text-shadow: none;
 }
@@ -103,10 +104,10 @@ header nav ul li a:hover{
 }
 
 .hero-form {
-  border: 3px solid #024e76;
-  background-color: #fce138;
+  border: 3px solid var(--color-dark-blue);
+  background-color:var(--color-yellow);
   padding: 20px;
-  color: #024e76;
+  color: var(--color-dark-blue);
   bottom: 120px;
   width: 40%;
   margin: 3.5%;
@@ -128,14 +129,79 @@ header nav ul li a:hover{
 }
 
 .form-input {
-  border: 1px solid #024e76;
+  border: 1px solid var(--color-dark-blue);
   background-color: rgba(255,255,255, 0.75);
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--color-dark-blue);
   width: 100%;
   margin-bottom: 15px;
+}
+.checkbox-wrapper input, .radio-wrapper input {
+  opacity: 0;
+}
+
+.checkbox-wrapper label, .radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
+}
+
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.75);  
+  border: 1px solid var(--color-dark-blue);  
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+
+.radio-wrapper label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-dark-blue);
+  position: absolute;
+  left: -29px;
+  top: -3px;
+}
+
+
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid var(--color-dark-blue);
+  border-bottom: 2px solid var(--color-dark-blue);
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input:checked + label,
+.radio-wrapper input:checked + label {
+  font-weight: bold;
+}
+
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
 }
 
 .form-input:focus {
@@ -144,8 +210,8 @@ header nav ul li a:hover{
 }
 
 .hero-form button {
-  color: #fce138;
-  background-color: #024e76;
+  color:var(--color-yellow);
+  background-color: var(--color-dark-blue);
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -154,7 +220,7 @@ header nav ul li a:hover{
 
 
 .hero-form button:hover{
-  background-color: #39a6b2;  
+  background-color: var(--color-blue);  
 }
 
 /* section hero ends */
@@ -171,7 +237,7 @@ section {
 
 .intro p {
   line-height: 1.7;
-  color: #39a6b2;
+  color: var(--color-blue);
   width: 80%;
   font-size: 20px;
   margin: 0 auto;
@@ -191,12 +257,12 @@ section {
 }
 
 .section-title.secondary-border {
-  border-color: #39a6b2;
+  border-color: var(--color-blue);
 }
 
 .section-title {
   font-size: 48px;
-  color: #024e76;
+  color: var(--color-dark-blue);
   border-bottom: 3px solid;
   padding-bottom: 20px;
   text-align: center;
@@ -212,7 +278,7 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #39a6b2;
+  border-bottom: 1px solid var(--color-blue);
 }
 
 .step:last-child { /* in this case we will take off the border bottom on the last child of the .step class*/
@@ -248,7 +314,7 @@ section {
 .step-text h4 {
   font-size: 26px;
   line-height: 1.5;
-  color: #024e76;
+  color: var(--color-dark-blue);
 }
 
 .step-text p{
@@ -270,8 +336,8 @@ section {
 }
 .trainer {
   margin: 20px;
-  background: #024e76;
-  color: #fce138;
+  background: var(--color-dark-blue);
+  color: var(--color-yellow);
   flex: 1;
 }
 
@@ -383,8 +449,8 @@ section {
 }
 
 .contact-form button:hover{
-  color: #fce138;
-  background: #39a6b2;
+  color: var(--color-yellow);
+  background: var(--color-blue);
 }
 
 .contact-form button:active{ /* the active in this case will always change the background color to red when we click */
